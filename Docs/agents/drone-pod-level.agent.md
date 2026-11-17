@@ -58,8 +58,10 @@ Out: any puzzle logic or puzzle UI, travel, story, audio, final art.
 
 ## Acceptance checklist
 
-- [x] Scene opens and plays with no errors.
-- [x] Player can walk from the bunk to the pilot seat without getting stuck.
-- [x] All four stations exist, show a prompt when looked at, and respond to E.
-- [x] EditMode tests in `Assets/_Project/Tests` pass.
+- [x] Project compiles with no errors or warnings in Unity 6000.6.9f1.
+- [x] All four stations exist, each with a free stand point from which it can be targeted (EditMode tests).
+- [x] The centre aisle is clear from the quarters to the cockpit doorway (EditMode capsule sweep).
+- [ ] Human Play-mode check: walk from the bunk to the pilot seat, see each prompt, press E at each station.
+      (Not yet done; only batch-mode tests and still renders have been run.)
+- [ ] Lighting pass: emissive props in the lab read too pale; colours need tuning.
 - [ ] Greybox replaced with final art.

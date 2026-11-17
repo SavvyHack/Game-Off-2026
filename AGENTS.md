@@ -51,8 +51,11 @@ Assets/_Project/
     UI/                    InteractionPromptUI
   Editor/                  editor-only code  (assembly GameOff.Editor)
     PodLevelBuilder.cs     generates the pod scene, materials and meshes
-  Materials/ Meshes/ Settings/   generated assets
+    PodMeshFactory.cs      procedural hull / ring / star meshes
+    PodScreenshots.cs      renders review screenshots to Temp/PodShots
+  Materials/ Meshes/ Settings/   generated assets (do not hand-edit)
   Tests/                   EditMode tests    (assembly GameOff.Tests)
+Assets/Settings/           URP pipeline and renderer assets (from Unity's URP template)
 ```
 
 Everything we author lives under `Assets/_Project`. Third-party assets go in `Assets/ThirdParty/<name>`.
@@ -64,6 +67,8 @@ While the pod is still greybox:
 
 - Change the layout by editing `PodLevelBuilder.cs` and rebuilding, **not** by hand-editing the scene.
   Hand edits are lost on the next rebuild.
+- After changing the layout, run **Tools > Game Off > Capture Pod Screenshots** and look at the images in
+  `Temp/PodShots`, and run the EditMode tests (they check every station is reachable and usable).
 - Puzzle features should add their own prefabs/UI and attach to the stations via the hooks below rather than
   rearranging the pod.
 - When real art replaces the greybox, this rule will be retired and this section updated.
